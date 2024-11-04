@@ -1,6 +1,7 @@
 <template>
   <div style="height: 100%; width: 100%">
     <WujieVue class="item" name="vue2" :url="vue2Url" :sync="true"></WujieVue>
+    <WujieVue class="item" name="vue3" :url="vue3Url" :sync="true"></WujieVue>
   </div>
 </template>
 
@@ -11,6 +12,7 @@ export default {
   data() {
     return {
       vue2Url: hostMap("//localhost:6100/"),
+      vue3Url: hostMap("//localhost:7300/"),
     };
   },
   methods: {

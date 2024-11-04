@@ -5,26 +5,15 @@
       <!-- vue2相关路由 -->
       <router-link to="/vue2">
         vue2
-        <a-icon
-          :class="['main-icon', { active: vue2Flag }]"
-          type="caret-up"
-          @click.native="handleFlag('vue2')"
-        />
       </router-link>
-      <div class="sub-menu" v-show="vue2Flag">
+      <!-- <div class="sub-menu" v-show="vue2Flag">
         <router-link to="/vue2-sub/home">home</router-link>
         <router-link to="/vue2-sub/dialog">dialog</router-link>
         <router-link to="/vue2-sub/location">location</router-link>
         <router-link to="/vue2-sub/communication">communication</router-link>
-      </div>
-      <!-- <router-link to="/all">all</router-link>
-      <a-button
-        class="menu-icon"
-        type="primary"
-        icon="unordered-list"
-        size="large"
-        @click.stop="active = !active"
-      /> -->
+      </div> -->
+      <router-link to="/vue3">vue3</router-link>
+      <router-link to="/all">all</router-link>
     </div>
     <div class="content" @click="active = false">
       <router-view />

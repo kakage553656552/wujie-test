@@ -69,6 +69,21 @@ setupApp({
   ...lifecycles,
 });
 
+setupApp({
+  name: "vue3",
+  url: hostMap("//localhost:7300/"),
+  attrs,
+  exec: true,
+  alive: true,
+  plugins: [{ cssExcludes: ["https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"] }],
+  props,
+  // 引入了的第三方样式不需要添加credentials
+  fetch: (url, options) =>
+    url.includes(hostMap("//localhost:7300/")) ? credentialsFetch(url, options) : window.fetch(url, options),
+  degrade,
+  ...lifecycles,
+});
+
 if (window.localStorage.getItem("preload") !== "false") {
   preloadApp({
     name: "vue2",
