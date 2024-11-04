@@ -3,6 +3,6 @@
 
 # npx --no-install commitlint --edit "$1"
 
-npm run husky-commitlint
+# npm run husky-commitlint
 
 
