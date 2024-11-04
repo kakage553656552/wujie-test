@@ -1,3 +1,4 @@
+const { codeInspectorPlugin } = require('code-inspector-plugin');
 module.exports = {
   transpileDependencies: ["element-ui", "ant-design-vue"],
   publicPath: "./",
@@ -10,4 +11,9 @@ module.exports = {
     port: "6100",
   },
   lintOnSave: false,
+  configureWebpack: config=>{
+    config.plugins.push(new codeInspectorPlugin({
+      bundler: 'webpack',
+    }));
+  }
 };

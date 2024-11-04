@@ -3,6 +3,7 @@
 /**
  * @type {import('@vue/cli-service').ProjectOptions}
  */
+const { codeInspectorPlugin } = require('code-inspector-plugin');
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "/demo-main-vue/" : "/",
   devServer: {
@@ -12,5 +13,10 @@ module.exports = {
     open: process.env.NODE_ENV === "development",
     port: "8000",
   },
-  lintOnSave: false
+  lintOnSave: false,
+  configureWebpack: config=>{
+    config.plugins.push(new codeInspectorPlugin({
+      bundler: 'webpack',
+    }));
+  }
 };

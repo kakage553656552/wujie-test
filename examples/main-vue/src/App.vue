@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav" :class="active ? 'active' : ''" @click="close">
-      <router-link to="/home">介绍</router-link>
+      <router-link to="/home">主App</router-link>
       <!-- vue2相关路由 -->
       <router-link to="/vue2">
         vue2
@@ -17,14 +17,14 @@
         <router-link to="/vue2-sub/location">location</router-link>
         <router-link to="/vue2-sub/communication">communication</router-link>
       </div>
-      <router-link to="/all">all</router-link>
+      <!-- <router-link to="/all">all</router-link>
       <a-button
         class="menu-icon"
         type="primary"
         icon="unordered-list"
         size="large"
         @click.stop="active = !active"
-      />
+      /> -->
     </div>
     <div class="content" @click="active = false">
       <router-view />
