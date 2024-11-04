@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "极致的微前端框架",
   "private": true,
+  "workspaces": [
+    "examples/*"
+  ],
   "scripts": {
     "dev": "turbo run start --parallel --no-cache",
     "doc": "turbo run docs:dev --filter=wujie-doc",
