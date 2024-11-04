@@ -6,6 +6,9 @@
       <router-link to="/vue2">
         vue2
       </router-link>
+      <router-link to="/vue222">
+        vue222
+      </router-link>
       <!-- <div class="sub-menu" v-show="vue2Flag">
         <router-link to="/vue2-sub/home">home</router-link>
         <router-link to="/vue2-sub/dialog">dialog</router-link>

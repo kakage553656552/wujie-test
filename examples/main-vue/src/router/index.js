@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 import Multiple from "../views/Multiple.vue";
 import Vue2 from "../views/Vue2.vue";
 import Vue2Sub from "../views/Vue2-sub.vue";
+import Vue222 from "../views/Vue222.vue";
+import Vue222Sub from "../views/Vue222-sub.vue";
 import Vue3 from "../views/Vue3.vue";
 import Vue3Sub from "../views/Vue3-sub.vue";
 
@@ -34,6 +36,16 @@ const routes = [
     path: "/vue2-sub/:path",
     name: "vue2-sub",
     component: Vue2Sub,
+  },
+  {
+    path: "/vue222",
+    name: "vue222",
+    component: Vue222,
+  },
+  {
+    path: "/vue222-sub/:path",
+    name: "vue222-sub",
+    component: Vue222Sub,
   },
   {
     path: "/vue3",

@@ -68,6 +68,16 @@ setupApp({
   degrade,
   ...lifecycles,
 });
+setupApp({
+  name: "vue233",
+  url: hostMap("//localhost:9999/"),
+  attrs,
+  exec: true,
+  props,
+  fetch: credentialsFetch,
+  degrade,
+  ...lifecycles,
+});
 
 setupApp({
   name: "vue3",

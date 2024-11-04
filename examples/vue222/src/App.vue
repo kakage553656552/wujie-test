@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    this is vue2
+    
+    this is vue222
     <div id="nav">
       <router-link to="/home">首页测试</router-link> | <router-link to="/dialog">弹窗</router-link> |
       <router-link to="/location">路由</router-link> |
