@@ -1,18 +1,18 @@
-node_modules
-vue.config.js
-/.vscode/settings.json
-
-default.conf
-cui-deploy.sh
-.gitlab-ci.yml
-nginx.conf
-
-.idea
-dist
 .DS_Store
-
+node_modules
+dist
+site
+lib
+esm
+.DS_Store
+.vscode
 yarn.lock
+package-lock.json
+coverage
+.history
+.npmrc
 
-.vscode/launch.json
-yarn.lock
-.eslintcache
+# Log files
+.pnpm-debug.log*
+cache
+.idea

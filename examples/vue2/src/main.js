@@ -31,9 +31,7 @@ import "./index.css";
 
 const base = process.env.NODE_ENV === "production" ? "/demo-vue2/" : "";
 
-[Tag, Button, Select, Option, Popover, Dialog].forEach((element) =>
-  Vue.use(element)
-);
+[Tag, Button, Select, Option, Popover, Dialog].forEach((element) => Vue.use(element));
 [AButton, ASelect, AModal, APopover].forEach((element) => Vue.use(element));
 
 Vue.use(VueRouter);
@@ -43,23 +41,12 @@ Vue.config.productionTip = false;
 if (window.__POWERED_BY_WUJIE__) {
   let instance;
   window.__WUJIE_MOUNT = () => {
-    const router = new VueRouter({
-      mode: "hash",
-      base,
-      routes,
-    });
+    const router = new VueRouter({ base, routes });
     instance = new Vue({ router, render: (h) => h(App) }).$mount("#app");
   };
   window.__WUJIE_UNMOUNT = () => {
     instance.$destroy();
   };
 } else {
-  new Vue({
-    router: new VueRouter({
-      mode: "hash",
-      base,
-      routes,
-    }),
-    render: (h) => h(App),
-  }).$mount("#app");
+  new Vue({ router: new VueRouter({ base, routes }), render: (h) => h(App) }).$mount("#app");
 }

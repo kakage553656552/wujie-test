@@ -4,12 +4,12 @@
 </template>
 
 <script>
-import hostMap from "../../wujie-config/hostMap";
+import hostMap from "../hostMap";
 
 export default {
   computed: {
     vue2Url() {
-      return hostMap("//localhost:6100/") + `#/${this.$route.params.path}`;
+      return hostMap("//localhost:7200/") + `#/${this.$route.params.path}`;
     },
   },
   methods: {

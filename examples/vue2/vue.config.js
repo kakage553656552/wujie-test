@@ -1,6 +1,9 @@
-const { codeInspectorPlugin } = require('code-inspector-plugin');
+// vue.config.js
+const {codeInspectorPlugin} = require('code-inspector-plugin');
+/**
+ * @type {import('@vue/cli-service').ProjectOptions}
+ */
 module.exports = {
-  transpileDependencies: ["element-ui", "ant-design-vue"],
   publicPath: "./",
   devServer: {
     headers: {
@@ -8,12 +11,16 @@ module.exports = {
       "Access-Control-Allow-Headers": "*",
       "Access-Control-Allow-Methods": "*",
     },
-    port: "6100",
+    port: "7200",
   },
-  lintOnSave: false,
-  configureWebpack: config=>{
-    config.plugins.push(new codeInspectorPlugin({
-      bundler: 'webpack',
-    }));
+  transpileDependencies: [
+    "sockjs-client",
+  ],
+  chainWebpack: (config) => {
+    config.plugin('conde-inspector-plugin').use(
+      codeInspectorPlugin({
+        bundler: 'webpack',
+      })
+    )
   }
 };
